@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class test {
     public static void main(String[] args) {
-      Permutations_46 permutations_46 = new Permutations_46();
-      int[] a = {1,2,3};
-      System.out.println(permutations_46.permute(a));
-
+        CourseScheduleII_210 courseScheduleII_210 = new CourseScheduleII_210();
+        int[][] edge = {{1,0},{0,1}};
+        int[] ans = courseScheduleII_210.findOrder(2,edge);
+        System.out.println(ans.length);
     }
 }

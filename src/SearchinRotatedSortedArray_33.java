@@ -12,18 +12,18 @@ public class SearchinRotatedSortedArray_33 {
         l = 0;
         r = nums.length-1;
 
-        while (l<r){
+        while (l<r){ //循环条件
             mid = (l+r)/2;
-            if (nums[mid] == target){
+            if (nums[mid] == target){ //刚好找到了
                 l = mid;
                 break;
             }
-            if (nums[l]<=nums[mid]){
+            if (nums[l]<=nums[mid]){ //如果左边是连续的，即最左边的小于中间的
                 if (target>=nums[l] && target <=nums[mid])
                     r = mid;
                 else l = mid+1;
 
-            }else {
+            }else { //否则右边一定是连续的
                 if (target>=nums[mid] && target <=nums[r])
                     l = mid+1;
                 else r = mid;
